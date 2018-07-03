@@ -34,6 +34,7 @@ public class TeamService {
 		for (Team t : teams) {
 			logger.debug("data enter: {}", t);
 		}
+		teamRepo.saveAll(teams);
 		resp.put("status", "okay");
 		return resp;
 	}
